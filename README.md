@@ -9,14 +9,7 @@
 
 ## Demo: From Chaos to Clarity
 
-<!-- 
-    INSTRUCTIONS FOR VIDEO 1: 
-    1. Upload your "Start to End" video to YouTube, Vimeo, or drag-and-drop the MP4 file into a GitHub Issue/PR to get a hosted URL.
-    2. Replace the link below with your video URL. 
-    3. If using a GIF, use: ![Demo](link-to-gif.gif)
--->
-
-[![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE "Code Archeologist Demo")
+https://github.com/user-attachments/assets/82cf0281-3565-4dad-a140-64391e730416
 
 > *Watch the system ingest a messy codebase, map it in 3D, and autonomously refactor a complex function.*
 
@@ -90,13 +83,9 @@ The **Engineer Agent** takes the plan and writes the actual code. The system cre
 ### Phase 5: Propagation
 If a function was renamed, the system identifies all **Callers** (files that use this function) using the Graph. It updates those files to use the new name automatically.
 
-<!-- 
-    INSTRUCTIONS FOR VIDEO 2: 
-    Place your second video (Propagation/Refactoring detail) here.
--->
-
 ### Feature Highlight: Propagation in Action
-*(Video placeholder: Show the system renaming a function and automatically updating the files that call it.)*
+
+https://github.com/user-attachments/assets/b47a5ab0-3670-4f68-953c-c030fbfda472
 
 ---
 
