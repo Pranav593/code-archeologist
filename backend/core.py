@@ -27,7 +27,7 @@ load_dotenv(override=True)
 class CodeArcheologist:
     def __init__(self):
         # self.log_callback = log_callback # Deprecated: We now rely on stdout capture
-        self.log("🏗️  Initializing Code Archeologist Core...")
+        self.log("Initializing Code Archeologist Core...")
         
         # Configuration
         self.safe_mode = True

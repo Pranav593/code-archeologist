@@ -1,4 +1,4 @@
-# Code Archeologist 🦖
+# Code Archeologist
 ### Autonomous Legacy Code Restoration & Refactoring Agent
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Status](https://img.shields.io/badge/status-experimental-orange.svg) ![AI](https://img.shields.io/badge/AI-Powered-purple.svg)
@@ -7,7 +7,7 @@
 
 ---
 
-## 🎥 Demo: From Chaos to Clarity
+## Demo: From Chaos to Clarity
 
 <!-- 
     INSTRUCTIONS FOR VIDEO 1: 
@@ -22,7 +22,7 @@
 
 ---
 
-## 🧠 The Mission
+## The Mission
 
 Legacy code is terrifying. Functions are thousands of lines long, variables are named `x` and `temp`, and touching one file breaks three others.
 
@@ -34,17 +34,17 @@ Legacy code is terrifying. Functions are thousands of lines long, variables are 
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-*   **🌐 3D Dependency Visualization**: Interactive Force-Directed Graph (using `react-force-graph`) allows you to physically see the clusters and tangles in your architecture.
-*   **🤖 Multi-Provider AI**: Pluggable architecture supporting **Google Gemini**, **OpenAI (GPT-4/Turbo)**, **Anthropic (Claude)**, and **Groq (Llama 3)**.
-*   **🛡️ Git Safety Net**: "Safe Mode" automatically creates a dedicated Git branch for every refactor. Never destroys code destructively.
-*   **🧠 Semantic Code Search (RAG)**: Search your codebase using natural language (e.g., *"Where is payment validation handled?"*) via ChromaDB vector embeddings.
-*   **🔍 Tree-Sitter Parsing**: Accurate, robust AST parsing for Python, JavaScript, TypeScript, Java, and more.
+*   **3D Dependency Visualization**: Interactive Force-Directed Graph (using `react-force-graph`) allows you to physically see the clusters and tangles in your architecture.
+*   **Multi-Provider AI**: Pluggable architecture supporting **Google Gemini**, **OpenAI (GPT-4/Turbo)**, **Anthropic (Claude)**, and **Groq (Llama 3)**.
+*   **Git Safety Net**: "Safe Mode" automatically creates a dedicated Git branch for every refactor. Never destroys code destructively.
+*   **Semantic Code Search (RAG)**: Search your codebase using natural language (e.g., *"Where is payment validation handled?"*) via ChromaDB vector embeddings.
+*   **Tree-Sitter Parsing**: Accurate, robust AST parsing for Python, JavaScript, TypeScript, Java, and more.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The system operates as a unified pipeline:
 
@@ -56,8 +56,8 @@ graph LR
     Server -->|Logic| Agents[AI Agents]
     
     subgraph "AI Agents"
-    Architect[Architect Agent\n(Plans Refactor)]
-    Engineer[Engineer Agent\n(Writes Code)]
+    Architect["Architect Agent<br/>(Plans Refactor)"]
+    Engineer["Engineer Agent<br/>(Writes Code)"]
     end
     
     Agents -->|Git Ops| Codebase[Target Repo]
@@ -71,23 +71,23 @@ graph LR
 
 ---
 
-## ⚙️ How It Works: The 5-Phase Pipeline
+## How It Works: The 5-Phase Pipeline
 
 The backend processes code in 5 distinct phases:
 
-### Phase 1: Ingestion & Excavation ⛏️
+### Phase 1: Ingestion & Excavation
 The system walks the file tree, using **Tree-Sitter** to parse every file into an Abstract Syntax Tree (AST). It identifies functions, classes, and global variables, creating "Nodes" in the graph.
 
-### Phase 2: Mapping The Invisible Strings 🗺️
+### Phase 2: Mapping The Invisible Strings
 It analyzes imports and function calls to draw "Edges" between nodes. It resolves relative imports (e.g., `from .utils import helper`) to their actual physical file locations.
 
-### Phase 3: The Architect Agent 📐
+### Phase 3: The Architect Agent
 When you request a "Heal" operation, the **Architect Agent** (a high-reasoning LLM) reads the function code, its dependencies, and its callers. It drafts a high-level Refactoring Plan focused on readability and SOLID principles.
 
-### Phase 4: The Execution Agent 👷
+### Phase 4: The Execution Agent
 The **Engineer Agent** takes the plan and writes the actual code. The system creates a new Git branch and surgically replaces the old function in the file using byte-level replacement.
 
-### Phase 5: Propagation 🕸️
+### Phase 5: Propagation
 If a function was renamed, the system identifies all **Callers** (files that use this function) using the Graph. It updates those files to use the new name automatically.
 
 <!-- 
@@ -95,16 +95,16 @@ If a function was renamed, the system identifies all **Callers** (files that use
     Place your second video (Propagation/Refactoring detail) here.
 -->
 
-### 🎥 Feature Highlight: Propagation in Action
+### Feature Highlight: Propagation in Action
 *(Video placeholder: Show the system renaming a function and automatically updating the files that call it.)*
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Setting up the Archeologist is simple. You can run the entire stack with Docker.
 
-### [➡️ Click here for the detailed SETUP GUIDE](SETUP.md)
+### [Click here for the detailed SETUP GUIDE](SETUP.md)
 
 **Quick Start (Docker):**
 1.  Clone the repo.
@@ -114,8 +114,8 @@ Setting up the Archeologist is simple. You can run the entire stack with Docker.
 
 ---
 
-## 🤝 Contribution
+## Contribution
 This project was built as a demonstration of autonomous coding agents. Feel free to fork it and add support for more languages (currently optimized for Python/JS).
 
-## 📄 License
+## License
 MIT License.

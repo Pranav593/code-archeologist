@@ -1,4 +1,4 @@
-# 🛠️ Setup & Installation Guide
+# Setup & Installation Guide
 
 This guide will help you get **Code Archeologist** running on your local machine.
 
@@ -16,7 +16,7 @@ Before you begin, ensure you have the following installed:
 
 ---
 
-## 🚀 Quick Start (Docker)
+## Quick Start (Docker)
 
 The application is containerized. This is the preferred method.
 
@@ -65,7 +65,7 @@ Open your browser and navigate to:
 
 ---
 
-## 💻 Manual Setup (Development)
+## Manual Setup (Development)
 
 If you want to run the services individually without Docker:
 
@@ -107,7 +107,7 @@ If you want to run the services individually without Docker:
 
 ---
 
-## 🧪 Testing with the Demo Codebase
+## Testing with the Demo Codebase
 
 The project comes with a `test_codebase/` folder pre-loaded with "messy" legacy code.
 
@@ -116,7 +116,7 @@ The project comes with a `test_codebase/` folder pre-loaded with "messy" legacy 
 3.  Navigate through the 3D graph to find different functions.
 4.  Click **Heal / Refactor** to test the AI capabilities.
 
-## ⚠️ "Safe Mode" & Git Integration
+## "Safe Mode" & Git Integration
 
 By default, the system runs in **SAFE MODE**.
 - When you apply a refactor, it **does not** overwrite your code directly.

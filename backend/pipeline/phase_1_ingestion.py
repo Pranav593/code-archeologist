@@ -7,7 +7,7 @@ def run(archeologist, project_path):
     - Parse code into AST using tree-sitter.
     - Store code chunks and vectors in ChromaDB.
     """
-    archeologist.log(f"🕵️  Phase 1: Excavating {project_path}...")
+    archeologist.log(f"Phase 1: Excavating {project_path}...")
     if not os.path.exists(project_path):
         archeologist.log(f"❌ Error: Path {project_path} does not exist.")
         return

@@ -6,7 +6,7 @@ def run(archeologist, old_node_id, new_name, project_path):
     Phase 5: Healing the Web (Propagation)
     - Update all callers to use the new name.
     """
-    print(f"🕸️  Phase 5: Propagating changes for {old_node_id} -> {new_name}...")
+    print(f"Phase 5: Propagating changes for {old_node_id} -> {new_name}...")
     
     old_name = old_node_id.split('::')[1]
     

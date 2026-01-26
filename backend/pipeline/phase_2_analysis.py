@@ -6,7 +6,7 @@ def run(archeologist):
     - Analyze imports and calls.
     - Build a directional graph of dependencies.
     """
-    archeologist.log("🗺️  Phase 2: Building the Dependency Map...")
+    archeologist.log("Phase 2: Building the Dependency Map...")
 
     # 1. Build Index: { filename : { func_name : node_id } }
     file_map = {} 

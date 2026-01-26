@@ -157,7 +157,7 @@ def trigger_analysis(repo_path: str = None):
     # Use CURRENT_REPO which might have been set by /settings
     target_repo = CURRENT_REPO
     
-    print(f"🔄 Re-initiating Analysis on {target_repo}")
+    print(f"Re-initiating Analysis on {target_repo}")
     
     try:
         # Instantiate Core (Lazy Loading happens here now!)
@@ -217,7 +217,7 @@ def run_search(request: SearchRequest):
     RAG Endpoint: Search the codebase for natural language queries.
     Returns: List of matching nodes to highlight in the UI.
     """
-    print(f"🔎 Received Search Query: {request.query}")
+    print(f"Received Search Query: {request.query}")
     results = archeologist.rag_search(request.query)
     return {"results": results}
 

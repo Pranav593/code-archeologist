@@ -10,7 +10,7 @@ def run(archeologist, plan_tuple, project_path):
     - Creates a Git Branch for safety.
     - Surgically replace the old function in the file.
     """
-    print("👷 Phase 4: Dispatching Agents...")
+    print("Phase 4: Dispatching Agents...")
     
     if not plan_tuple:
         print("   -> No plan to execute.")

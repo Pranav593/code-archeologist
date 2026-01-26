@@ -6,7 +6,7 @@ def run_search(archeologist, query_text, n_results=3):
     if not archeologist.has_memory:
         return []
         
-    print(f"🔍 RAG Search: '{query_text}'")
+    print(f"RAG Search: '{query_text}'")
     try:
         results = archeologist.collection.query(
             query_texts=[query_text],
@@ -134,7 +134,7 @@ def generate_heal_plan(archeologist, project_path, specific_target=None):
     - Build Context (Graph + RAG).
     - Consult Architect Model to generate a heal plan.
     """
-    print("🧠 Phase 3: Consulting the Architect...")
+    print("Phase 3: Consulting the Architect...")
     
     if not archeologist.has_ai:
         print("   -> AI disabled. Skipping strategy generation.")
