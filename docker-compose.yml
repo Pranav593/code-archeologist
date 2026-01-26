@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app:ro               # Hot reload support (read-only code)
+      - .:/workspace                    # Mount the ENTIRE project workspace
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8000
+    depends_on:
+      - chromadb
+    command: python -m uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: 
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    # Override default production command to enable Development Mode (Hot Reloading)
+    # Also ensure dependencies are installed (fix for stale anonymous volumes)
+    command: sh -c "npm install && npm run dev"
+
+  chromadb:
+    image: chromadb/chroma
+    ports:
+      - "8001:8000" # Expose on 8001 to avoid conflict with backend on host
+    volumes:
+      # Map to the correct persistence directory for modern Chroma images
+      # Logs confirmed it writes to /data
+      - ./chroma_data:/data
+    environment:
+      - IS_PERSISTENT=TRUE

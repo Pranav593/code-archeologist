@@ -1,0 +1,32 @@
+# Web Framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Core Logic
+python-dotenv
+pydantic
+requests
+
+# Data & Graphs
+networkx
+pandas
+numpy
+
+# Parsing & Archeology
+tree-sitter
+tree-sitter-python
+tree-sitter-javascript
+tree-sitter-java
+tree-sitter-php
+tree-sitter-c-sharp
+
+# Vector Database (The "Memory")
+chromadb
+
+# AI Clients
+google-generativeai
+openai
+anthropic
+groq
+websockets
