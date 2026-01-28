@@ -7,21 +7,20 @@
 
 ---
 
-## Demo: From Chaos to Clarity
+## A Demo of the Project:
 
 https://github.com/user-attachments/assets/82cf0281-3565-4dad-a140-64391e730416
 
-> *Watch the system ingest a messy codebase, map it in 3D, and autonomously refactor a complex function.*
 
 ---
 
-## The Mission
+## Overview of the project:
 
-Legacy code is terrifying. Functions are thousands of lines long, variables are named `x` and `temp`, and touching one file breaks three others.
+Legacy code is very messy. Functions are thousands of lines long, variable names are ambiguous, and touching one file may break others.
 
 **Code Archeologist** solves this by treating code as a **Knowledge Graph**, not just text. It:
 1.  **Ingests** your entire project to build a dependency map.
-2.  **Visualizes** the spaghetti code so you can see the complexity.
+2.  **Visualizes** the code so you can see the complexity.
 3.  **Embeds** the logic into a Vector Database for semantic understanding.
 4.  **Refactors** specific nodes using AI Agents, ensuring the change propagates safely to callers.
 
@@ -75,15 +74,15 @@ The system walks the file tree, using **Tree-Sitter** to parse every file into a
 It analyzes imports and function calls to draw "Edges" between nodes. It resolves relative imports (e.g., `from .utils import helper`) to their actual physical file locations.
 
 ### Phase 3: The Architect Agent
-When you request a "Heal" operation, the **Architect Agent** (a high-reasoning LLM) reads the function code, its dependencies, and its callers. It drafts a high-level Refactoring Plan focused on readability and SOLID principles.
+When you request a "Heal" operation, the **Architect Agent** (any high-reasoning LLM) reads the function code, its dependencies, and its callers. It drafts a high-level Refactoring Plan focused on readability and SOLID principles.
 
 ### Phase 4: The Execution Agent
 The **Engineer Agent** takes the plan and writes the actual code. The system creates a new Git branch and surgically replaces the old function in the file using byte-level replacement.
 
 ### Phase 5: Propagation
-If a function was renamed, the system identifies all **Callers** (files that use this function) using the Graph. It updates those files to use the new name automatically.
+If a function was renamed, the system identifies all **Callers** (files that use this function) using the Graph. It automatically updates those files to use the new name.
 
-### Feature Highlight: Propagation in Action
+### How Propagation Works:
 
 https://github.com/user-attachments/assets/b47a5ab0-3670-4f68-953c-c030fbfda472
 
@@ -91,7 +90,7 @@ https://github.com/user-attachments/assets/b47a5ab0-3670-4f68-953c-c030fbfda472
 
 ## Getting Started
 
-Setting up the Archeologist is simple. You can run the entire stack with Docker.
+Setting up this project is very easy, as you can run the entire stack with Docker.
 
 ### [Click here for the detailed SETUP GUIDE](SETUP.md)
 
